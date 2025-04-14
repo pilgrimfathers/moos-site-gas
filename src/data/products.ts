@@ -5,7 +5,6 @@ export interface Product {
     price: string;
     features: string[];
     images: string[];
-    buyNowButton: boolean;
 }
 
 const products: Product[] = [
@@ -21,7 +20,6 @@ const products: Product[] = [
             '/images/burner.jpeg',
             '/images/stove-switch.jpeg'
         ],
-        buyNowButton: true
     },
     {
         id: 2,
@@ -35,7 +33,6 @@ const products: Product[] = [
             '/images/gas-inlet.jpeg',
             '/images/rubber-stand.jpeg'
         ],
-        buyNowButton: false
     },
     {
         id: 3,
@@ -48,7 +45,6 @@ const products: Product[] = [
             '/images/gas-inlet.jpeg',
             '/images/rubber-stand.jpeg'
         ],
-        buyNowButton: false
     }
 ];
 
