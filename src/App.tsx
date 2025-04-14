@@ -1,44 +1,34 @@
-import React, { useState } from 'react';
-import { Flame, Shield, Zap, Star, MessageCircle, ChevronRight, Menu, X } from 'lucide-react';
-
-const products = [
-  {
-    id: 1,
-    name: 'Asachi Pro 3X',
-    description: 'Premium triple-burner gas stove with precision control',
-    price: 1299,
-    features: ['Triple burner system', 'Premium stainless steel', 'Smart heat distribution'],
-    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=2000'
-  },
-  {
-    id: 2,
-    name: 'Asachi Elite',
-    description: 'Professional-grade single burner for precise cooking',
-    price: 599,
-    features: ['Professional grade', 'Compact design', 'Maximum efficiency'],
-    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=2000'
-  }
-];
-
-const testimonials = [
-  {
-    id: 1,
-    name: 'Chef Michael Roberts',
-    role: 'Executive Chef',
-    content: 'The precision and power of Asachi stoves have revolutionized my kitchen. The heat distribution is unmatched.',
-    rating: 5
-  },
-  {
-    id: 2,
-    name: 'Sarah Chen',
-    role: 'Home Chef',
-    content: 'Finally found a stove that combines beautiful design with professional performance. Worth every penny!',
-    rating: 5
-  }
-];
+import { ChevronRight, Flame, Menu, MessageCircle, Shield, Star, X, Zap } from 'lucide-react';
+import { useState } from 'react';
+import ProductCard from './components/ProductCard';
+import products from './data/products.ts';
+import testimonials from './data/testmonials.ts';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>({});
+
+  const nextImage = (productId: number) => {
+    setCurrentImageIndex((prev) => {
+      const product = products.find(p => p.id === productId);
+      const currentIndex = prev[productId] || 0;
+      return {
+        ...prev,
+        [productId]: product ? (currentIndex + 1) % product.images.length : 0
+      };
+    });
+  };
+
+  const prevImage = (productId: number) => {
+    setCurrentImageIndex((prev) => {
+      const product = products.find(p => p.id === productId);
+      const currentIndex = prev[productId] || 0;
+      return {
+        ...prev,
+        [productId]: product ? (currentIndex - 1 + product.images.length) % product.images.length : 0
+      };
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -91,7 +81,7 @@ function App() {
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
               Precision Engineered for
-              <span className="block text-[#1B4D3E] mt-2">Culinary Excellence</span>
+              <span className="block text-[#8CC9BD] mt-2">Culinary Excellence</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-100 max-w-3xl mx-auto">
               Experience the perfect blend of power, precision, and elegance with Asachi's premium cooking stoves.
@@ -152,25 +142,14 @@ function App() {
           
           <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:gap-x-8">
             {products.map((product) => (
-              <div key={product.id} className="group">
-                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden bg-gray-100">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="object-cover object-center"
-                  />
-                </div>
-                <div className="mt-4 flex items-center justify-between space-x-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">{product.name}</h3>
-                    <p className="mt-1 text-sm text-gray-600">{product.description}</p>
-                  </div>
-                  <p className="text-xl font-bold text-gray-900">${product.price}</p>
-                </div>
-                <button className="mt-4 w-full bg-[#1B4D3E] text-white px-6 py-3 rounded-md hover:bg-[#163c30] transition-colors">
-                  Buy Now
-                </button>
-              </div>
+              <ProductCard
+                key={product.id}
+                product={product}
+                currentImageIndex={currentImageIndex}
+                setCurrentImageIndex={setCurrentImageIndex}
+                nextImage={nextImage}
+                prevImage={prevImage}
+              />
             ))}
           </div>
         </div>
