@@ -87,8 +87,13 @@ function App() {
               Experience the perfect blend of power, precision, and elegance with Asachi's premium cooking stoves.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <a href="#products" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]">
-                Shop Now
+              <a 
+                href="https://wa.me/+919495030107?text=Hello, I'm interested in Asachi products" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]"
+              >
+                Learn More
                 <ChevronRight className="ml-2 h-5 w-5" />
               </a>
               <a href="#features" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white/10">
@@ -189,10 +194,15 @@ function App() {
             </p>
             
             <div className="mt-8 flex items-center justify-center">
-              <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]">
+              <a 
+                href="https://wa.me/+919495030107?text=Hello, I need assistance with Asachi products" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]"
+              >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Start Live Chat
-              </button>
+              </a>
             </div>
           </div>
         </div>
