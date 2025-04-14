@@ -1,0 +1,255 @@
+import React, { useState } from 'react';
+import { Flame, Shield, Zap, Star, MessageCircle, ChevronRight, Menu, X } from 'lucide-react';
+
+const products = [
+  {
+    id: 1,
+    name: 'Asachi Pro 3X',
+    description: 'Premium triple-burner gas stove with precision control',
+    price: 1299,
+    features: ['Triple burner system', 'Premium stainless steel', 'Smart heat distribution'],
+    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=2000'
+  },
+  {
+    id: 2,
+    name: 'Asachi Elite',
+    description: 'Professional-grade single burner for precise cooking',
+    price: 599,
+    features: ['Professional grade', 'Compact design', 'Maximum efficiency'],
+    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=2000'
+  }
+];
+
+const testimonials = [
+  {
+    id: 1,
+    name: 'Chef Michael Roberts',
+    role: 'Executive Chef',
+    content: 'The precision and power of Asachi stoves have revolutionized my kitchen. The heat distribution is unmatched.',
+    rating: 5
+  },
+  {
+    id: 2,
+    name: 'Sarah Chen',
+    role: 'Home Chef',
+    content: 'Finally found a stove that combines beautiful design with professional performance. Worth every penny!',
+    rating: 5
+  }
+];
+
+function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16 items-center">
+            <div className="flex-shrink-0">
+              <span className="text-2xl font-bold text-gray-900">ASACHI</span>
+            </div>
+            
+            <div className="hidden md:flex space-x-8">
+              <a href="#products" className="text-gray-700 hover:text-gray-900">Products</a>
+              <a href="#features" className="text-gray-700 hover:text-gray-900">Features</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-gray-900">Testimonials</a>
+              <a href="#contact" className="text-gray-700 hover:text-gray-900">Contact</a>
+            </div>
+
+            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
+        </div>
+        
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <a href="#products" className="block px-3 py-2 text-gray-700">Products</a>
+              <a href="#features" className="block px-3 py-2 text-gray-700">Features</a>
+              <a href="#testimonials" className="block px-3 py-2 text-gray-700">Testimonials</a>
+              <a href="#contact" className="block px-3 py-2 text-gray-700">Contact</a>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=2000" 
+            alt="Luxury Kitchen"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+              Precision Engineered for
+              <span className="block text-[#1B4D3E] mt-2">Culinary Excellence</span>
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-gray-100 max-w-3xl mx-auto">
+              Experience the perfect blend of power, precision, and elegance with Asachi's premium cooking stoves.
+            </p>
+            <div className="mt-8 flex justify-center gap-4">
+              <a href="#products" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]">
+                Shop Now
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </a>
+              <a href="#features" className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white/10">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900">Why Choose Asachi</h2>
+            <p className="mt-4 text-gray-600">Engineered for performance, designed for excellence</p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="relative p-6 bg-white rounded-xl shadow-sm">
+              <div className="absolute top-6 right-6">
+                <Flame className="h-6 w-6 text-[#1B4D3E]" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Superior Heat Control</h3>
+              <p className="mt-4 text-gray-600">Precise temperature regulation for perfect cooking results every time.</p>
+            </div>
+
+            <div className="relative p-6 bg-white rounded-xl shadow-sm">
+              <div className="absolute top-6 right-6">
+                <Shield className="h-6 w-6 text-[#1B4D3E]" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Built to Last</h3>
+              <p className="mt-4 text-gray-600">Premium materials and craftsmanship ensure years of reliable performance.</p>
+            </div>
+
+            <div className="relative p-6 bg-white rounded-xl shadow-sm">
+              <div className="absolute top-6 right-6">
+                <Zap className="h-6 w-6 text-[#1B4D3E]" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Energy Efficient</h3>
+              <p className="mt-4 text-gray-600">Advanced technology for optimal fuel consumption and performance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center">Our Premium Collection</h2>
+          
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:gap-x-8">
+            {products.map((product) => (
+              <div key={product.id} className="group">
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden bg-gray-100">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="mt-4 flex items-center justify-between space-x-8">
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{product.name}</h3>
+                    <p className="mt-1 text-sm text-gray-600">{product.description}</p>
+                  </div>
+                  <p className="text-xl font-bold text-gray-900">${product.price}</p>
+                </div>
+                <button className="mt-4 w-full bg-[#1B4D3E] text-white px-6 py-3 rounded-md hover:bg-[#163c30] transition-colors">
+                  Buy Now
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center">What Our Customers Say</h2>
+          
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex items-center space-x-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="mt-4 text-gray-600">{testimonial.content}</p>
+                <div className="mt-4">
+                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-lg mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 text-center">Get in Touch</h2>
+            <p className="mt-4 text-center text-gray-600">
+              Have questions? Our team is here to help.
+            </p>
+            
+            <div className="mt-8 flex items-center justify-center">
+              <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Start Live Chat
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-bold">ASACHI</h3>
+              <p className="mt-4 text-gray-400">Crafting premium cooking experiences since 2010.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold">Quick Links</h4>
+              <ul className="mt-4 space-y-2">
+                <li><a href="#products" className="text-gray-400 hover:text-white">Products</a></li>
+                <li><a href="#features" className="text-gray-400 hover:text-white">Features</a></li>
+                <li><a href="#testimonials" className="text-gray-400 hover:text-white">Testimonials</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold">Contact</h4>
+              <ul className="mt-4 space-y-2">
+                <li className="text-gray-400">1-800-ASACHI</li>
+                <li className="text-gray-400">support@asachi.com</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Asachi. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
