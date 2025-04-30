@@ -69,15 +69,23 @@ function App() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="" 
-            alt="Luxury Kitchen"
+          <video 
+            autoPlay 
+            loop 
+            muted 
             className="w-full h-full object-cover"
+          >
+            <source src="/videos/landingpage-hero.webm" type="video/webm" />
+          </video>
+          <img 
+            src="/images/landing-img.webp" 
+            alt="Luxury Kitchen"
+            className="absolute bottom-0 w-full h-3/5 object-contain z-10"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/50 z-20"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
               Precision Engineered for
