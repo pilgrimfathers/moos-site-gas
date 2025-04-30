@@ -70,7 +70,7 @@ function ProductCard({ product, currentImageIndex, setCurrentImageIndex, nextIma
                     <h3 className="text-xl font-bold text-gray-900">{product.name}</h3>
                     <p className="mt-1 text-sm text-gray-600">{product.description}</p>
                 </div>
-                <p className="text-xl font-bold text-gray-900">${product.price}</p>
+                <p className="text-xl font-bold text-gray-900">₹{product.price}</p>
             </div>
             <div className="mt-auto pt-4">
                 <a 

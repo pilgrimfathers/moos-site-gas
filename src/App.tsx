@@ -70,7 +70,7 @@ function App() {
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=2000" 
+            src="" 
             alt="Luxury Kitchen"
             className="w-full h-full object-cover"
           />
@@ -112,7 +112,11 @@ function App() {
             <p className="mt-4 text-gray-600">Engineered for performance, designed for excellence</p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="flex justify-center items-center mx-16 mt-4">
+            <img src="./images/gas-labeled.webp" alt="Asachi" />
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
                 <Flame className="h-6 w-6 text-[#1B4D3E]" />
