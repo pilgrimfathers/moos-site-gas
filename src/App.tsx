@@ -81,7 +81,7 @@ function App() {
           <div className="text-center pt-0 sm:pt-0 lg:pt-0 pb-10 sm:pb-14 lg:pb-18">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
               Precision Engineered for
-              <span className="block text-[#C19A6B] mt-2">Culinary Excellence</span>
+              <span className="block text-[#FFB43D] mt-2">Culinary Excellence</span>
             </h1>
             <p className="mt-4 text-lg sm:text-xl text-gray-100 max-w-3xl mx-auto">
               Experience the perfect blend of power, precision, and elegance with Asachi's premium cooking stoves.
@@ -92,7 +92,7 @@ function App() {
                 href="https://wa.me/+919495030107?text=Hello, I'm interested in Asachi products" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#B18A3D] hover:bg-[#8F6E2F]"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#9F682A] hover:bg-[#7D5021]"
               >
                 Learn More
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -120,7 +120,7 @@ function App() {
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
-                <Flame className="h-6 w-6 text-[#B18A3D]" />
+                <Flame className="h-6 w-6 text-[#9F682A]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Superior Heat Control</h3>
               <p className="mt-4 text-gray-600">Precise temperature regulation for perfect cooking results every time.</p>
@@ -128,7 +128,7 @@ function App() {
 
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
-                <Shield className="h-6 w-6 text-[#B18A3D]" />
+                <Shield className="h-6 w-6 text-[#9F682A]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Built to Last</h3>
               <p className="mt-4 text-gray-600">Premium materials and craftsmanship ensure years of reliable performance.</p>
@@ -136,7 +136,7 @@ function App() {
 
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
-                <Zap className="h-6 w-6 text-[#B18A3D]" />
+                <Zap className="h-6 w-6 text-[#9F682A]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Energy Efficient</h3>
               <p className="mt-4 text-gray-600">Advanced technology for optimal fuel consumption and performance.</p>
@@ -203,7 +203,7 @@ function App() {
                 href="https://wa.me/+919495030107?text=Hello, I need assistance with Asachi products" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#B18A3D] hover:bg-[#8F6E2F]"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#9F682A] hover:bg-[#7D5021]"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Start Live Chat
