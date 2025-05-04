@@ -78,15 +78,16 @@ function App() {
         </div>
         
         <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center pt-0 sm:pt-0 lg:pt-0 pb-10 sm:pb-14 lg:pb-18">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
               Precision Engineered for
-              <span className="block text-[#D4B460] mt-2">Culinary Excellence</span>
+              <span className="block text-[#C19A6B] mt-2">Culinary Excellence</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg sm:text-xl text-gray-100 max-w-3xl mx-auto">
               Experience the perfect blend of power, precision, and elegance with Asachi's premium cooking stoves.
             </p>
-            <div className="mt-8 flex justify-center gap-4">
+            
+            <div className="mt-24 sm:mt-30 lg:mt-38 flex justify-center gap-4">
               <a 
                 href="https://wa.me/+919495030107?text=Hello, I'm interested in Asachi products" 
                 target="_blank"
