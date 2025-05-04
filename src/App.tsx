@@ -69,18 +69,10 @@ function App() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24">
         <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            className="w-full h-full object-cover"
-          >
-            <source src="/videos/landingpage-hero.webm" type="video/webm" />
-          </video>
           <img 
             src="/images/landing-img.webp" 
             alt="Luxury Kitchen"
-            className="absolute bottom-0 w-full h-3/5 object-contain z-10"
+            className="absolute inset-0 w-full h-full object-cover z-10"
           />
           <div className="absolute inset-0 bg-black/50 z-20"></div>
         </div>
@@ -89,7 +81,7 @@ function App() {
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
               Precision Engineered for
-              <span className="block text-[#8CC9BD] mt-2">Culinary Excellence</span>
+              <span className="block text-[#D4B460] mt-2">Culinary Excellence</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-100 max-w-3xl mx-auto">
               Experience the perfect blend of power, precision, and elegance with Asachi's premium cooking stoves.
@@ -99,7 +91,7 @@ function App() {
                 href="https://wa.me/+919495030107?text=Hello, I'm interested in Asachi products" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#B18A3D] hover:bg-[#8F6E2F]"
               >
                 Learn More
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -127,7 +119,7 @@ function App() {
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
-                <Flame className="h-6 w-6 text-[#1B4D3E]" />
+                <Flame className="h-6 w-6 text-[#B18A3D]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Superior Heat Control</h3>
               <p className="mt-4 text-gray-600">Precise temperature regulation for perfect cooking results every time.</p>
@@ -135,7 +127,7 @@ function App() {
 
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
-                <Shield className="h-6 w-6 text-[#1B4D3E]" />
+                <Shield className="h-6 w-6 text-[#B18A3D]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Built to Last</h3>
               <p className="mt-4 text-gray-600">Premium materials and craftsmanship ensure years of reliable performance.</p>
@@ -143,7 +135,7 @@ function App() {
 
             <div className="relative p-6 bg-white rounded-xl shadow-sm">
               <div className="absolute top-6 right-6">
-                <Zap className="h-6 w-6 text-[#1B4D3E]" />
+                <Zap className="h-6 w-6 text-[#B18A3D]" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Energy Efficient</h3>
               <p className="mt-4 text-gray-600">Advanced technology for optimal fuel consumption and performance.</p>
@@ -210,7 +202,7 @@ function App() {
                 href="https://wa.me/+919495030107?text=Hello, I need assistance with Asachi products" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#1B4D3E] hover:bg-[#163c30]"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#B18A3D] hover:bg-[#8F6E2F]"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Start Live Chat
